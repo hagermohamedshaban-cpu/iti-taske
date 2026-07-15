@@ -1,0 +1,37 @@
+body{
+    margin:0;
+    padding: 0;
+    
+}
+
+
+.child{
+    width: 100px;
+    height: 100px;
+    color: rgb(14, 171, 239);
+    text-align: center;
+    padding: 15px;
+    margin:  80px auto;
+  width: 30%;
+    height: 400px;
+    border: 15px solid inherit;
+     text-align: center;
+     border-radius: 20px;
+     background-color: antiquewhite;
+
+
+}
+.child p{
+    color: rgb(28, 185, 238);
+}
+.child img{
+    width: 80%;
+    border-radius: 40%;
+
+}
+button{
+    background-color: deepskyblue;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 10px;
+}
