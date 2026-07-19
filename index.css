@@ -1,37 +1,144 @@
-body{
-    margin:0;
+/* body{
+    margin: 0;
     padding: 0;
+
+}
+ul{
+    color: white;
+    background-color: rgb(10, 30, 35);
+  list-style: none;
+  
+
+}
+
+.perant p{
+    border: solid 5px black;
     
 }
 
-
-.child{
-    width: 100px;
-    height: 100px;
-    color: rgb(14, 171, 239);
-    text-align: center;
-    padding: 15px;
-    margin:  80px auto;
-  width: 30%;
-    height: 400px;
-    border: 15px solid inherit;
-     text-align: center;
-     border-radius: 20px;
-     background-color: antiquewhite;
-
-
+.contanier{
+    gap: 12px;
+    margin: 50px auto;
+    height: 80vh;
+    width: 70%;
+   
+    display: grid;
+   grid-template-columns: repeat(3, 3.333);
+    grid-template-areas: 
+    "area1 area2 area3"
+    "area4 area2 area6"
+    "area4 area8 area9"
+    ;
 }
-.child p{
-    color: rgb(28, 185, 238);
+.item-1{
+   grid-area: area1 ; 
+} 
+.item-2{
+grid-area: area2 ;
 }
-.child img{
-    width: 80%;
-    border-radius: 40%;
+.item-3{
+grid-area: area3 ; 
+}
+.item-4{
+grid-area:area4 ;
+}
+.item-5{
+grid-area: area6;
+}
+.item-6{
+grid-area: area8;
+}
+.item-7{
+grid-area: area9 ;
+}  
+ 
 
+.contanier >div{
+    position: relative;
 }
-button{
-    background-color: deepskyblue;
+.contanier img{
+    width: 100%;
+    height: 100%;
+}
+.contanier .caption{
     color: white;
-    padding: 5px 8px;
-    border-radius: 10px;
+    text-align: center;
+   background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 30%;
+} */
+ body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    color: white;
+    background-color: rgb(10, 30, 35);
+    list-style: none;
+}
+
+.perant p {
+    border: solid 5px black;
+}
+
+/* تعديل الـ Container الأساسي */
+.contanier {
+    gap: 12px;
+    margin: 50px auto;
+    width: 70%;
+    display: grid;
+    /* تصحيح القيمة هنا بـ 1fr ليتقسم بالتساوي */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-areas: 
+        "area1 area2 area3"
+        "area4 area2 area6"
+        "area4 area8 area9";
+}
+
+.item-1 { grid-area: area1; } 
+.item-2 { grid-area: area2; }
+.item-3 { grid-area: area3; }
+.item-4 { grid-area: area4; }
+.item-5 { grid-area: area6; }
+.item-6 { grid-area: area8; }
+.item-7 { grid-area: area9; }  
+
+.contanier > div {
+    position: relative;
+    overflow: hidden; /* عشان يمنع أي صورة تخرج برة حدود العنصر بتاعها */
+}
+
+.contanier img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* عشان الصور تحافظ على نسبها ومتبقاش ممطوطة */
+    display: block;
+}
+
+.contanier .caption {
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* عشان يوسطن الكلام بالظبط */
+    padding: 15px; /* تقليل البادنج عشان الـ 30% القديمة كانت بتخفي الكلام برة الشاشة */
+}
+
+/* إضافة مسافة للفورم عشان تظهر بشكل مريح تحت الجريد */
+.foter-sec {
+    padding: 40px 15%;
+    background-color: #f8f9fa; /* لون خلفية خفيف يفصل الفورم */
 }
